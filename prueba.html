@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+body{
+background-color: #F6F4F3;
+display: grid;
+grid-template-rows: 150px 600px 200px;
+grid-template-columns: 50% 50% ;
+grid-template-areas: "header header"
+"sec1 sec2"
+"footer footer"
+
+}
+header{
+background-color: #C2B2A0;
+display: grid;
+grid-area: header;
+}
+nav{
+background-color: #C2B2A0;
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+margin: 10px;
+}
+aside{
+background-color: #C2B2A0;
+width: 150px;
+display: grid;
+margin: 10px;
+flex-grow: 3;
+color: #31241E;
+}
+#sec1{
+background:
+
+url("https://www.opinion.com.bo/media/opinion/images/2018/12/02/2018N275129.jpg") no-repeat center;
+
+background-color: #4D8464;
+display: grid;
+grid-area: sec1;
+margin: 10px;
+}
+#sec2{
+background-color: #C2B2A0;
+display: grid;
+grid-area: sec2;
+margin: 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+flex-wrap: wrap;
+}
+footer{
+background-color: #C2B2A0;
+display: grid;
+grid-area: footer;
+display: flex;
+justify-content: center;
+align-items: center;
+color: #31241E;
+}
+.fi{
+font-family: Arial, sans-serif;
+text-align: center;
+font-size: 22px;
+font-weight: bold;
+}
+a{
+color: #31241E;
+font-family: Arial, sans-serif;
+text-align: center;
+font-size: 18px;
+font-weight: bold;
+text-decoration: none;
+}
+
+a:hover{
+color: #86654B;
+}
+form{
+background-color: #F6F4F3;
+border-radius: 5px;
+border-style: solid;
+border-width: 3px;
+border-color: #31241E;
+padding: 25px;
+}
+label{
+color: #4D8464;
+display: block;
+float: center;
+}
+input{
+background-color: #F6F4F3;
+border-radius: 5px;
+border-style: solid;
+border-width: 2px;
+border-color: #31241E;
+color: #31241E;
+width: 220px;
+}
+
+.inp{
+background-color: #4D8464;
+border-radius: 5px;
+border-style: solid;
+border-width: 2px;
+border-color: #31241E;
+color: #D1C8C1;
+padding: 10px;
+width: 110px;
+}
+#logo {
+height: 40px;
+width: auto;
+margin: 0 10px;
+}
+@media (max-width: 800px) {
+body{
+background-color: #F6F4F3;
+display: grid;
+grid-template-rows: 200px 200px 530px 200px;
+grid-template-columns: 100%;
+grid-template-areas: "header"
+"sec1"
+"sec2"
+"footer"
+
+}
+
+.in{
+font-size: 14px;
+}
+#logo {
+height: 40px;
+width: auto;
+margin: 0 10px;
+}
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<aside><a class="in" href="Principal.php"><img id="logo" src="logo.jpeg"
+
+alt="Logo"></a></aside>
+
+<aside><a class="in" href="Principal.php">CASERO</a></aside>
+<aside><a class="in" href="Principal.php">INICIO</a></aside>
+<aside><a class="in" href="Nosotros.php">SOBRE NOSOTROS</a></aside>
+<aside><a class="in" href="Convenios.php">CONVENIOS</a></aside>
+<aside><a class="in" href="Sesion.php">INICIAR SESIÓN</a></aside>
+</nav>
+</header>
+<section id="sec1"></section>
+<section id="sec2">
+<form action="Registro.php" method="post">
+
+<labeL>Nombre(s): </labeL><input type="text" name="nombre"/> <br/> <br/>
+<label>Apellido Paterno: </label><input type="text" name="ap"/> <br/> <br/>
+<label>Apellido Materno: </label><input type="text" name="am"/> <br/> <br/>
+<label>Correo Electrónico: </label><input type="email" name="corrreo"/> <br/> <br/>
+<label>Edad: </label><input type="number" name="edad"/> <br/> <br/>
+<label>Usuario: </label><input type="text" name="usuario"/> <br/> <br/>
+<label>Contraseña: </label><input type="password" name="contraseña"/> <br/> <br/>
+<button class="inp" onclick="location.href='Migui.php'">Iniciar Sesion</button>
+<input class="inp" type="submit" name="iniciar" value="Iniciar Sesión"/>
+<input class="inp" type="reset" name="borrar" value="Borrar" />
+</form>
+</section>
+<footer>
+<p class="fi">Pie de página</p>
+</footer>
+</body>
+</html>
